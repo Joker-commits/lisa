@@ -147,6 +147,10 @@ vendor.bluetooth.soc=hastings
 camera.disable_zsl_mode=true
 ro.hardware.camera=xiaomi
 
+# Chipset
+ro.soc.manufacturer=QTI
+ro.soc.model=SM7325
+
 # CNE
 persist.vendor.cne.feature=1
 
