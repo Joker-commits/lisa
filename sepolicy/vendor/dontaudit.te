@@ -1,0 +1,4 @@
+
+dontaudit {
+  rild
+} default_prop:file r_file_perms;
