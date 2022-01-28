@@ -31,4 +31,6 @@
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_radius_bottom">102px</dimen>
 
+    <!-- for 18dp of padding at 2.75px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">16dp</dimen>
 </resources>
