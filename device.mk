@@ -270,6 +270,7 @@ PRODUCT_PACKAGES += \
     
 # Media
 PRODUCT_PACKAGES += \
+    libminijail \
     libavservices_minijail.vendor \
     libcodec2_vndk.vendor \
     libcodec2_hidl@1.1.vendor \
