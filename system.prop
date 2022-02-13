@@ -8,9 +8,6 @@ persist.vendor.cne.feature=1
 # DPM
 persist.vendor.dpm.feature=11
 
-# Graphics
-debug.sf.disable_backpressure=1
-
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
