@@ -187,6 +187,12 @@ TARGET_USES_MKE2FS := true
 # Sepolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
+# Soong
+SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
+SOONG_CONFIG_xiaomiSm8350Vars += \
+    vibrator_use_effect_stream
+SOONG_CONFIG_xiaomiSm8350Vars_vibrator_use_effect_stream ?= false
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
