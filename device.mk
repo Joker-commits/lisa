@@ -179,6 +179,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service.clearkey
 
 # Fastbootd
@@ -202,6 +203,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
 
 # GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor
+
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
@@ -245,6 +249,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.authsecret@1.0.vendor \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.keymaster@4.1.vendor
+    
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
@@ -276,6 +286,9 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Network
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
@@ -299,6 +312,10 @@ PRODUCT_PACKAGES += \
     ls_nq_client \
     se_nq_extn_client
 
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
@@ -321,6 +338,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     vendor.qti.hardware.perf@2.2.vendor
 
@@ -377,6 +395,11 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     telephony-ext
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.6.vendor
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
