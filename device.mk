@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/haydn/haydn-vendor.mk)
+$(call inherit-product, vendor/xiaomi/lisa/lisa-vendor.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -186,7 +186,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.haydn
+    android.hardware.biometrics.fingerprint@2.1-service.lisa
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -441,7 +441,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.haydn
+    vendor.qti.hardware.vibrator.service.lisa
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

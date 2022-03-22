@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=haydn
+DEVICE=lisa
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

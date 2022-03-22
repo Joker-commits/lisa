@@ -3,7 +3,7 @@ Common_CFlags += ["-Werror"]
 Common_CFlags += ["-DUSE_EFFECT_STREAM"]
 
 cc_library_shared {
-    name: "vendor.qti.hardware.vibrator.impl.haydn",
+    name: "vendor.qti.hardware.vibrator.impl.lisa",
     vendor: true,
     cflags: Common_CFlags,
     srcs: [
@@ -21,12 +21,12 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "vendor.qti.hardware.vibrator.service.haydn",
+    name: "vendor.qti.hardware.vibrator.service.lisa",
     vendor: true,
     relative_install_path: "hw",
-    init_rc: ["vendor.qti.hardware.vibrator.service.haydn.rc"],
+    init_rc: ["vendor.qti.hardware.vibrator.service.lisa.rc"],
     vintf_fragments: [
-        "vendor.qti.hardware.vibrator.service.haydn.xml",
+        "vendor.qti.hardware.vibrator.service.lisa.xml",
     ],
     cflags: Common_CFlags,
     srcs: [
@@ -38,6 +38,6 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "android.hardware.vibrator-ndk_platform",
-        "vendor.qti.hardware.vibrator.impl.haydn",
+        "vendor.qti.hardware.vibrator.impl.lisa",
     ],
 }

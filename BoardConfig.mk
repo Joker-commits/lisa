@@ -6,12 +6,12 @@
 
 BOARD_VENDOR := xiaomi
 
-DEVICE_PATH := device/xiaomi/haydn
+DEVICE_PATH := device/xiaomi/lisa
 
 BUILD_BROKEN_DUP_RULES := true
 
 # Inherit from proprietary files
-include vendor/xiaomi/haydn/BoardConfigVendor.mk
+include vendor/xiaomi/lisa/BoardConfigVendor.mk
 
 # A/B
 AB_OTA_UPDATER := true
@@ -47,7 +47,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := haydn,haydnin
+TARGET_OTA_ASSERT_DEVICE := lisa
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -84,14 +84,12 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/framew
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/c2_manifest_vendor.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
-ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := \
-    $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_haydn
-TARGET_RECOVERY_DEVICE_MODULES := libinit_haydn
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lisa
+TARGET_RECOVERY_DEVICE_MODULES := libinit_lisa
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -103,15 +101,14 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/haydn-qgki_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/haydn
-BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3 cgroup.memory=nokmem,nosocket console=ttyMSM0,115200n8 loop.max_part=7 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=0 pcie_ports=compat iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 video=vfb:640x400,bpp=32,memsize=3072000
+TARGET_KERNEL_CONFIG := vendor/lisa-qgki_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/lisa
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1
 
 # Kernel modules
 BOOT_KERNEL_MODULES := \
     hwid.ko \
-    fts_touch_spi.ko \
-    focaltech_touch.ko \
+    goodix_core.ko \
     xiaomi_touch.ko
 
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
@@ -124,7 +121,7 @@ TARGET_USES_NQ_NFC := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
-BOARD_DTBOIMG_PARTITION_SIZE := 8388608
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
@@ -173,10 +170,13 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USES_MKE2FS := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
@@ -185,7 +185,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_SCREEN_DENSITY := 440
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-12-01
+VENDOR_SECURITY_PATCH := 2021-10-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
