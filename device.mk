@@ -376,12 +376,6 @@ PRODUCT_ENFORCE_RRO_TARGETS += *
 # Overlays-RRO
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    HaydnCNSettingsProvider \
-    HaydnCNWifiOverlay \
-    HaydnGLSettingsProvider \
-    HaydnGLWifiOverlay \
-    HaydnProSettingsProvider \
-    HaydnProWifiOverlay \
     WifiOverlay
 
 # Telephony
