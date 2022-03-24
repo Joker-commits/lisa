@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-    Copyright (c) 2018-2021 Qualcomm Technologies, Inc.
+    Copyright (c) 2018-2020 Qualcomm Technologies, Inc.
     All Rights Reserved.
     Confidential and Proprietary - Qualcomm Technologies, Inc.
 
@@ -43,7 +43,7 @@
 -->
 
 <!--
- Lahaina Non-Secure decoder capabilities
+ Shima Non-Secure decoder capabilities
  (MB is defined as 16x16)
  _______________________________________________________
  | Codec       |  W      H      fps     Mbps    MB/s   |
@@ -57,7 +57,7 @@
  | mpeg2       | 1920   1088    30       40     244800 |
  |_____________|_______________________________________|
 
- Lahaina Secure decoder capabilities
+ Shima Secure decoder capabilities
  (MB is defined as 16x16)
  __________________________________________________
  | Codec    |  W      H      fps    Mbps   MB/s   |
@@ -70,7 +70,7 @@
  |          | 4096   2176    48     40            |
  |__________|_____________________________________|
 
- Lahaina Non-Secure encoder capabilities (Secure not supported)
+ Shima Non-Secure encoder capabilities (Secure not supported)
  (MB is defined as 16x16)
  __________________________________________________
  | Codec    |  W      H      fps   Mbps    MB/s   |
@@ -86,7 +86,6 @@
     <Include href="media_codecs_google_audio.xml" />
     <Include href="media_codecs_vendor_audio.xml" />
     <Include href="media_codecs_google_telephony.xml" />
-    <Include href="media_codecs_c2_audio.xml" />
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="11" />
     </Settings>
@@ -246,7 +245,6 @@
             <Limit name="bitrate" range="1-100000000" />
             <Limit name="frame-rate" range="1-480" />
             <Limit name="concurrent-instances" max="16" />
-            <Feature name="bitrate-modes" value="VBR,CBR" />
             <Limit name="performance-point-4096x2304" value="30" />
             <Limit name="performance-point-3840x2160" value="60" />
             <Limit name="performance-point-1920x1080" value="240" />
