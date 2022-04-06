@@ -35,20 +35,15 @@ int property_get(const char *key, char *value, const char *default_value);
 inline const char* BtmGetDefaultName()
 {
 	char region[92];
-	char sku[92];
 	property_get("ro.boot.hwc", region, "");
-	property_get("ro.boot.hardware.sku", sku, "");
 
 	if (!strcmp("IN", region)) {
-		return "Mi 11X Pro";
+		return "Xiaomi 11 Lite NE";
 	}
 	if (!strcmp("CN", region)) {
-        if (!strcmp("haydnpro", sku)) {
-            return "Redmi K40 Pro+";
-        }
-        return "Redmi K40 Pro";
+        return "Mi 11 LE";
     }
-    return "Mi 11i";
+    return "Xiaomi 11 Lite 5G NE";
 }
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
