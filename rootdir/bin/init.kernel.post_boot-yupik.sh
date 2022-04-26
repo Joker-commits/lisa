@@ -77,6 +77,30 @@ function configure_zram_parameters() {
 	fi
 }
 
+function configure_read_ahead_kb_values() {
+	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+	MemTotal=${MemTotalStr:16:8}
+
+	dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
+
+	# Set 128 for <= 3GB &
+	# set 512 for >= 4GB targets.
+	if [ $MemTotal -le 3145728 ]; then
+		ra_kb=128
+	else
+		ra_kb=512
+	fi
+	if [ -f /sys/block/mmcblk0/bdi/read_ahead_kb ]; then
+		echo $ra_kb > /sys/block/mmcblk0/bdi/read_ahead_kb
+	fi
+	if [ -f /sys/block/mmcblk0rpmb/bdi/read_ahead_kb ]; then
+		echo $ra_kb > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
+	fi
+	for dm in $dmpts; do
+		echo $ra_kb > $dm
+	done
+}
+
 function configure_memory_parameters() {
 	# Set Memory parameters.
 	#
@@ -100,17 +124,12 @@ function configure_memory_parameters() {
 	ProductName=`getprop ro.product.name`
 
 	configure_zram_parameters
+	configure_read_ahead_kb_values
 	echo 100 > /proc/sys/vm/swappiness
 
         # Disable wsf  beacause we are using efk.
         # wsf Range : 1..1000. So set to bare minimum value 1.
         echo 1 > /proc/sys/vm/watermark_scale_factor
-
-	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-	MemTotal=${MemTotalStr:16:8}
-	if [ $MemTotal -le 8388608 ]; then
-		echo 0 > /proc/sys/vm/watermark_boost_factor
-	fi
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
 	echo 2 > /proc/sys/vm/kswapd_threads
@@ -161,11 +180,8 @@ echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus
 
 # cpuset parameters
-echo 0-2 > /dev/cpuset/background/cpus
+echo 0-3 > /dev/cpuset/background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
-echo 4-6 > /dev/cpuset/foreground/boost/cpus
-echo 0-2,4-6 > /dev/cpuset/foreground/cpus
-echo 0-7 > /dev/cpuset/top-app/cpus
 
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/kernel/sched_boost
@@ -179,12 +195,8 @@ echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 # configure input boost settings
-echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+echo "0:1152000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-
-# configure powerkey boost settings
-echo "0:1804800 1:0 2:0 3:0 4:2400000 5:0 6:0 7:2400000" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 # configure governor settings for gold cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
