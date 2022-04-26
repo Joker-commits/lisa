@@ -1300,7 +1300,6 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 
 # Perf config
-vendor/etc/msm_irqbalance.conf
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
