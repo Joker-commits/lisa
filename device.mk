@@ -183,7 +183,8 @@ PRODUCT_PACKAGES += \
     memtrack.default
 
 PRODUCT_PACKAGES += \
-    disable_configstore
+    disable_configstore \
+    lights.lisa
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml \
