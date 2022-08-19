@@ -15,7 +15,7 @@
 # Fingerprint
 /data/vendor/fpdump(/.*)?                                           u:object_r:vendor_fingerprint_data_file:s0
 /data/vendor/fpc(/.*)?                                              u:object_r:vendor_fingerprint_data_file:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.haydn u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.lisa u:object_r:hal_fingerprint_default_exec:s0
 
 # IR
 /dev/ir_spi                                                          u:object_r:vendor_ir_device:s0
@@ -36,7 +36,7 @@
 /vendor/bin/mi_thermald                              u:object_r:mi_thermald_exec:s0
 
 # Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.haydn                            u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.lisa                            u:object_r:hal_vibrator_default_exec:s0
 
 # Xiaomi MAC
 /vendor/bin/nv_mac                             u:object_r:vendor_wcnss_service_exec:s0
