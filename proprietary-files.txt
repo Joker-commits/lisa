@@ -1010,11 +1010,11 @@ vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1-qti.so
 
-# Hotword Enrollment - from V12.5.14.0.RKOMIXM
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|867879538984e88e9506d002a1343144a61f5b8b
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|847f4c03d44e2be2b8cc5fc99b0a0a02adc2b0d4
+# Hotword Enrollment - from missi-user-12-SKQ1.211006.001-V13.0.4.0.SKOMIXM-release-keys
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|1f9513ba807bced528203f829eb9a8249e915d38
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|b53e90faf861f36c3b71f7f15f54960b1e9d6313
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
 
 # IMS
 system_ext/lib64/libdiag_system.so
