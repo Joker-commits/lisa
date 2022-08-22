@@ -60,3 +60,6 @@ genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup                             
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                          u:object_r:sysfs_wakeup:s0
+
+# Display param
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param   u:object_r:sysfs_disp_param:s0
