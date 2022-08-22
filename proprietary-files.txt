@@ -1131,11 +1131,49 @@ vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 
 # Media Configs
+vendor/etc/media_codecs_lahaina_vendor.xml
+vendor/etc/media_codecs_lahaina.xml
+vendor/etc/media_codecs_performance_lahaina_vendor.xml
+vendor/etc/media_codecs_performance_lahaina.xml
+vendor/etc/media_codecs_performance_shima_v1.xml
+vendor/etc/media_codecs_performance_shima_v2.xml
+vendor/etc/media_codecs_performance_shima_v3.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_codecs_performance_yupik_iot.xml
+vendor/etc/media_codecs_performance_yupik_v0.xml
+vendor/etc/media_codecs_performance_yupik_v1.xml
+vendor/etc/media_codecs_shima_v1_vendor.xml
+vendor/etc/media_codecs_shima_v1.xml
+vendor/etc/media_codecs_shima_v2.xml
+vendor/etc/media_codecs_shima_v3.xml
+vendor/etc/media_codecs_system_default_lahaina.xml
+vendor/etc/media_codecs_system_default_shima.xml
+vendor/etc/media_codecs_system_default_yupik.xml
+vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_codecs_with_dolby_lahaina.xml
+vendor/etc/media_codecs_with_dolby_shima.xml
+vendor/etc/media_codecs_with_dolby_yupik.xml
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_yupik_iot.xml
+vendor/etc/media_codecs_yupik_v0.xml
+vendor/etc/media_codecs_yupik_v1.xml
 vendor/etc/media_lahaina/video_system_specs.json
+vendor/etc/media_profiles_lahaina_vendor.xml
+vendor/etc/media_profiles_lahaina.xml
+vendor/etc/media_profiles_shima_v1.xml
+vendor/etc/media_profiles_shima_v2.xml
+vendor/etc/media_profiles_shima_v3.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_vendor.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_yupik_iot.xml
+vendor/etc/media_profiles_yupik_v0.xml
+vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/media_shima_v1/video_system_specs.json
 vendor/etc/media_shima_v2/video_system_specs.json
 vendor/etc/media_shima_v3/video_system_specs.json
 vendor/etc/media/video_system_specs.json
+vendor/etc/media_yupik_iot/video_system_specs.json
 vendor/etc/media_yupik_v0/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/video_system_specs.json
@@ -1237,6 +1275,11 @@ vendor/lib64/jcos_nq_client.so
 vendor/lib64/ls_nq_client.so
 vendor/lib64/se_nq_extn_client.so
 
+# NFC Configs
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nxp_RF.conf
+
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/bin/msm_irqbalance
@@ -1277,6 +1320,9 @@ vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# Public libraries
+vendor/etc/public.libraries.txt
 
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
@@ -1333,6 +1379,7 @@ vendor/lib/libqmi.so
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/framework/qcrilhook.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/adpl
@@ -1606,6 +1653,9 @@ vendor/firmware/aw8624_haptic.bin
 vendor/firmware/aw8624_rtp.bin
 vendor/firmware/osc_rtp_24K_5s.bin
 
+# Vibrator Config
+vendor/etc/excluded-input-devices.xml
+
 # VPP
 vendor/bin/hw/qconfigservice
 vendor/bin/vppservice
@@ -1709,6 +1759,12 @@ vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
+
+# WLAN Configs
+vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini:vendor/etc/wifi/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Xiaomi MAC
 vendor/bin/nv_mac
