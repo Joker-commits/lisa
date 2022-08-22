@@ -141,6 +141,8 @@ on boot
 
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
+    # Set disp_param permissions
+    chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param
 
 on init && property:ro.boot.mode=charger
     mount_all /vendor/etc/charger_fstab.qcom --early
