@@ -11,12 +11,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lisa device
 $(call inherit-product, device/xiaomi/lisa/device.mk)
 
-# Inherit some common Kaleidoscope stuff
-$(call inherit-product, vendor/kscope/target/product/mobile.mk)
+# Inherit some common Arrow stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := kscope_lisa
+PRODUCT_NAME := arrow_lisa
 PRODUCT_DEVICE := lisa
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 11 Lite NE
