@@ -22,5 +22,5 @@ persist.vendor.dpm.feature=11
 vendor.media.target_variant=_yupik_v1
 
 # WFD
+debug.sf.latch_unsignaled=1
 persist.debug.wfd.enable=1
-vendor.wfdservice64=enable
