@@ -97,7 +97,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := lisa_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lisa
-TARGET_KERNEL_CLANG_VERSION := r450784b
+TARGET_KERNEL_CLANG_VERSION := r450784d
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1
 BOARD_RAMDISK_USE_LZ4 := true
 
