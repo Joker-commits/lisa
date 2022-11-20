@@ -1,16 +1,18 @@
 [
   {
-    "repository": "android_vendor_xiaomi_lisa",
-    "target_path": "vendor/xiaomi/lisa"
+    "repository": "ALKALiKong-ROMProject/vendor_xiaomi_lisa-oss",
+    "target_path": "vendor/xiaomi/lisa",
+    "remote": "github",
+    "branch": "arrow-13.0"
   },
   {
     "repository"   : "android_kernel_xiaomi_lisa",
     "target_path"  : "kernel/xiaomi/lisa"
   },
   {
+    "repository": "ALKALiKong/vendor_xiaomi_lisa-miuicamera",
+    "target_path": "vendor/xiaomi/lisa-miuicamera",
     "remote": "gitlab",
-    "repository": "ALKALiKong/prebuilts_clang_host_linux-x86_clang-r450784b",
-    "target_path": "prebuilts/clang/host/linux-x86/clang-r450784b",
-    "branch": "master"
+    "branch": "arrow-13.0"
   }
 ]
