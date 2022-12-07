@@ -1,9 +1,7 @@
 [
   {
-    "repository": "ALKALiKong-ROMProject/vendor_xiaomi_lisa-oss",
-    "target_path": "vendor/xiaomi/lisa",
-    "remote": "github",
-    "branch": "arrow-13.0"
+    "repository": "android_vendor_xiaomi_lisa-oss",
+    "target_path": "vendor/xiaomi/lisa"
   },
   {
     "repository"   : "android_kernel_xiaomi_lisa",
