@@ -66,3 +66,6 @@ TARGET_BOARD_PLATFORM := lahaina
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+
+# Inherit proprietary blobs
+-include vendor/xiaomi/lisa/BoardConfigVendor.mk
