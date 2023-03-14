@@ -120,5 +120,9 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USES_MKE2FS := true
 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
+
 # Inherit proprietary blobs
 -include vendor/xiaomi/lisa/BoardConfigVendor.mk
