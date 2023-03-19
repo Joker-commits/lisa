@@ -820,4 +820,7 @@
     <!-- Defines the value used by the device sysfs node
          to disable DC dimming -->
     <string name="config_deviceDcDimmingDisableValue">08 00</string>
+
+    <!-- Disable livedisplay -->
+    <bool name="config_enableLiveDisplay">false</bool>
 </resources>
