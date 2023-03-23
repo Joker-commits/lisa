@@ -26,6 +26,22 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <compatibility-matrix version="1.0" type="framework">
+    <hal format="hidl" optional="true">
+    <name>android.hardware.audio.effect</name>
+        <version>7.0</version>
+        <interface>
+            <name>IEffectsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.audio</name>
+        <version>7.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
    <hal format="hidl" optional="true">
        <name>vendor.qti.hardware.scve.panorama</name>
        <version>1.0</version>
@@ -409,15 +425,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.wifi.supplicant</name>
-        <version>1.0-2</version>
-        <interface>
-            <name>ISupplicant</name>
-            <instance>default</instance>
-            <instance>wigigp2p</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.wigig.netperftuner</name>
         <version>1.0</version>
         <interface>
@@ -595,6 +602,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>default</instance>
        </interface>
    </hal>
+   <hal format="aidl" optional="true">
+       <name>android.hardware.drm</name>
+       <interface>
+           <name>IDrmFactory</name>
+           <instance>clearkey</instance>
+       </interface>
+   </hal>
    <hal format="hidl" optional="true">
        <name>vendor.qti.hardware.data.iwlan</name>
        <version>1.0</version>
@@ -673,6 +687,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <version>1.0-1</version>
         <interface>
             <name>IBluetoothSar</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.bluetooth.audio</name>
+        <interface>
+            <name>IBluetoothAudioProviderFactory</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -877,6 +898,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <interface>
             <name>ISxrCrypto</name>
             <instance>sxrhalservice</instance>
+        </interface>
+    </hal>
+    <!-- USB Hal service -->
+    <hal format="hidl" optional="true">
+        <name>android.hardware.usb</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>
