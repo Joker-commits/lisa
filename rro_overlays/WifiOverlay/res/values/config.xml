@@ -51,6 +51,9 @@
     <!-- Boolean indicating supports for quick connect -->
     <bool translatable="false" name="config_wifi_framework_enable_quick_connect">true</bool>
 
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
     <!-- Integer for Wifi Partial scan results fetching period(in ms) -->
     <integer translatable="false" name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
 
