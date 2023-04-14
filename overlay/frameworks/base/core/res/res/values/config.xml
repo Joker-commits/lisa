@@ -856,7 +856,6 @@
     <!-- Default values for LiveDisplay -->
     <bool name="config_enableLiveDisplay">false</bool>
 
-
     <!-- Build fingerprint from stock ROM -->
     <string name="config_stockFingerprint" translatable="false">Xiaomi/lisa_global/lisa:13/TKQ1.220829.002/V14.0.3.0.TKOMIXM:user/release-keys</string> 
 
@@ -865,4 +864,5 @@
     
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
 </resources>
