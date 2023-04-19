@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/lisa/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_lisa
+PRODUCT_NAME := voltage_lisa
 PRODUCT_DEVICE := lisa
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 11 Lite NE
@@ -29,3 +29,9 @@ PRODUCT_SYSTEM_DEVICE := lisa
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
+
+# Official-ify
+VOLTAGE_BUILD_TYPE := OFFICIAL
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1920
