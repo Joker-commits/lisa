@@ -1,4 +1,4 @@
-# Device proprietary files - from lisa MIUI V14.0.2.0.TKOMIXM package, unless pinned
+# Device proprietary files - from lisa MIUI V14.0.3.0.TKOMIXM package, unless pinned
 
 # ACDB libraries
 vendor/lib/libacdb-fts.so
@@ -740,7 +740,7 @@ vendor/etc/display/DPU7__.xml
 vendor/etc/display/advanced_sf_offsets.xml
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.composer-service|655461b1f0de3f7f22541d227e66d3e73bcfdba2
+vendor/bin/hw/vendor.qti.hardware.display.composer-service|129d35e3f6af66326f4a097ea390c88b6f1a3950
 vendor/bin/init.qti.display_boot.sh
 vendor/lib64/libclient2slpi.notifier.so
 vendor/lib64/libdisp-aba.so
@@ -1521,3 +1521,4 @@ vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
+vendor/etc/wifi/qca6750/WCNSS_qcom_cfg.ini:vendor/etc/wifi/WCNSS_qcom_cfg.ini
