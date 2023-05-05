@@ -55,6 +55,9 @@ TARGET_BOOTLOADER_BOARD_NAME := lisa
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Camera
+MALLOC_SVELTE := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 TARGET_USES_VULKAN := true
