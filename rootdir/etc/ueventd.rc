@@ -148,3 +148,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/bus/platform/devices/soc:fingerprint_fpc* vendor           0700  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* request_vreg     0700  system system
 /sys/bus/platform/devices/soc:fingerprint_fpc* power_cfg        0700  system system
+
+# socinfo
+/sys/devices/soc0           serial_number            0000    root    root
