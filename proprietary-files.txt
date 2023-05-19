@@ -16,13 +16,13 @@ vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
+vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.10.pmd
-vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP Modules
 vendor/lib/rfsa/adsp/bm2n06.bin
@@ -122,32 +122,32 @@ system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec127
 -system_ext/priv-app/daxService/daxService.apk|ed1de719afc7181a7e896e0eeaf14edc00761c21
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|84247a3563b362e97dacaa79d4845c1292a92f13
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
-vendor/lib/soundfx/libhwdap.so|6348b774b3df7bd2f485186f2ebc3e84d9435df8
-vendor/lib/soundfx/libswdap.so|bd73d33628837d0e3aa18d85c5ffb8e95b87af1b
-vendor/lib/soundfx/libswgamedap.so|a4d17b610b5cd873bd82c28f7361ba66a5d2c48e
 vendor/lib/libdapparamstorage.so|6c488c6bc88abe13c6fd689124475526c1cf41b8
 vendor/lib/libdeccfg.so|28b3aa2368d091b50ef7d5f3c3d44466a89172f8
 vendor/lib/libqtigef.so|d2e8b296db9d8ff19051858ee1a0143e06c69df3
 vendor/lib/libstagefright_soft_ac4dec.so|e1560136d7f16ed177e8f848fba3448014ea061c
 vendor/lib/libstagefright_soft_ddpdec.so|c1a83910911cdab332088b10b2d3675b735a9524
 vendor/lib/libstagefrightdolby.so|c4269437c623630cf9c79c2010a7cfb88828584a
+vendor/lib/soundfx/libhwdap.so|6348b774b3df7bd2f485186f2ebc3e84d9435df8
+vendor/lib/soundfx/libswdap.so|bd73d33628837d0e3aa18d85c5ffb8e95b87af1b
+vendor/lib/soundfx/libswgamedap.so|a4d17b610b5cd873bd82c28f7361ba66a5d2c48e
 vendor/lib/vendor.dolby.hardware.dms@2.0.so|73532d31c8fdad87b69e9cc1724dfc5b02a893e7
-vendor/lib64/soundfx/libhwdap.so|901e19f8e271c8d228e41136ea8d611c3b3d30b4
-vendor/lib64/soundfx/libswdap.so|a468c839bd18e31d50f92d371dbd079374667068
-vendor/lib64/soundfx/libswgamedap.so|0491096a45e14d8097ceb80c15c0f946bbade389
 vendor/lib64/libdapparamstorage.so|b820de455f13bce531331f9e134b1e56b8a651d4
 vendor/lib64/libdeccfg.so|adea652793ab688253b0b56d6c165625184eab54
 vendor/lib64/libdlbdsservice.so|f8867071a19efabef94eae4eb62424a5a88b9ef0
 vendor/lib64/libstagefright_soft_ac4dec.so|8c89d21ba388c05504f2950d8a7c1103e57214ad
 vendor/lib64/libstagefright_soft_ddpdec.so|555b5b366c35bad0c6d6e98a3d04f1105e4d9e92
 vendor/lib64/libstagefrightdolby.so|67157be87b3d8fe2c5a057044ce596ce1b68d16b
+vendor/lib64/soundfx/libhwdap.so|901e19f8e271c8d228e41136ea8d611c3b3d30b4
+vendor/lib64/soundfx/libswdap.so|a468c839bd18e31d50f92d371dbd079374667068
+vendor/lib64/soundfx/libswgamedap.so|0491096a45e14d8097ceb80c15c0f946bbade389
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|da03a56f6fbeb2bbe23ebb3a48b30fc3e5e76da3
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so|45ab26d743b6a56b505447012347493ff41057fc
 
 # Bluetooth (A2DP)
+vendor/lib/btaudio_offload_if.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/vendor.qti.hardware.bluetooth_audio@2.1.so
@@ -320,28 +320,6 @@ vendor/lib64/camera/components/com.xiaomi.node.tracker.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera configs
-vendor/etc/camera/model/dof_model/capture_cache
-vendor/etc/camera/model/dof_model/capture_model
-vendor/etc/camera/model/dof_model/capture_policy
-vendor/etc/camera/model/rt_model/preview_cache
-vendor/etc/camera/model/rt_model/preview_model
-vendor/etc/camera/model/rt_model/preview_policy
-vendor/etc/camera/xiaomi/dualbokehjpegsnapshot.json
-vendor/etc/camera/xiaomi/dualbokehsnapshot.json
-vendor/etc/camera/xiaomi/frontbokehsnapshot.json
-vendor/etc/camera/xiaomi/frontsinglesnapshot.json
-vendor/etc/camera/xiaomi/frontsupernightsnapshot.json
-vendor/etc/camera/xiaomi/frontsupernightsnapshotjpeg.json
-vendor/etc/camera/xiaomi/manualsnapshot.json
-vendor/etc/camera/xiaomi/miviinfo.json
-vendor/etc/camera/xiaomi/mivisettings.txt
-vendor/etc/camera/xiaomi/normalsnapshot.json
-vendor/etc/camera/xiaomi/rearsupernightsnapshot.json
-vendor/etc/camera/xiaomi/satsnapshot.json
-vendor/etc/camera/xiaomi/superhdsnapshot.json
-vendor/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json
-vendor/etc/camera/xiaomi/thirdpartyjpegsnapshot.json
-vendor/etc/camera/xiaomi/thirdpartysnapshot.json
 vendor/etc/camera/CFR_para_MACRO_V01.bin
 vendor/etc/camera/CFR_para_MACRO_V01_L.bin
 vendor/etc/camera/CFR_para_MACRO_V01_SN.bin
@@ -387,6 +365,12 @@ vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/etc/camera/miai_hdr_config.yaml
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
+vendor/etc/camera/model/dof_model/capture_cache
+vendor/etc/camera/model/dof_model/capture_model
+vendor/etc/camera/model/dof_model/capture_policy
+vendor/etc/camera/model/rt_model/preview_cache
+vendor/etc/camera/model/rt_model/preview_model
+vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/model1
 vendor/etc/camera/model2
 vendor/etc/camera/model3
@@ -410,6 +394,22 @@ vendor/etc/camera/sr_params.xml
 vendor/etc/camera/superiq_model
 vendor/etc/camera/ubwctp10helper.bin
 vendor/etc/camera/vidhance_calibration
+vendor/etc/camera/xiaomi/dualbokehjpegsnapshot.json
+vendor/etc/camera/xiaomi/dualbokehsnapshot.json
+vendor/etc/camera/xiaomi/frontbokehsnapshot.json
+vendor/etc/camera/xiaomi/frontsinglesnapshot.json
+vendor/etc/camera/xiaomi/frontsupernightsnapshot.json
+vendor/etc/camera/xiaomi/frontsupernightsnapshotjpeg.json
+vendor/etc/camera/xiaomi/manualsnapshot.json
+vendor/etc/camera/xiaomi/miviinfo.json
+vendor/etc/camera/xiaomi/mivisettings.txt
+vendor/etc/camera/xiaomi/normalsnapshot.json
+vendor/etc/camera/xiaomi/rearsupernightsnapshot.json
+vendor/etc/camera/xiaomi/satsnapshot.json
+vendor/etc/camera/xiaomi/superhdsnapshot.json
+vendor/etc/camera/xiaomi/thirdpartydualbokehyuvsnapshot.json
+vendor/etc/camera/xiaomi/thirdpartyjpegsnapshot.json
+vendor/etc/camera/xiaomi/thirdpartysnapshot.json
 
 # Camera features
 vendor/lib64/com.qti.feature2.anchorsync.so
@@ -500,15 +500,15 @@ vendor/lib64/com.qti.settings.kodiak.so
 
 # Camera
 vendor/lib/libcamxexternalformatutils.so
-vendor/lib64/hw/camera.qcom.so
-vendor/lib64/hw/camera.xiaomi.so
-vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.stats.common.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
+vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/camera.xiaomi.so
+vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libAF.so
 vendor/lib64/libFlickerDet.so
 vendor/lib64/libMegviiFacepp-0.5.2.so
@@ -674,8 +674,8 @@ vendor/lib64/libdpmqmihal.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DRM
 vendor/etc/gpfspath_oem_config.xml
@@ -766,8 +766,8 @@ vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/libtinyxml2_1.so
 
 # Displayfeature
-vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/bin/displayfeature
+vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
 vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
@@ -984,8 +984,8 @@ vendor/lib/libsmwrapper.so
 
 # Media (Dolby Vision)
 vendor/bin/hw/dolbycodec2
-vendor/etc/init/dolbycodec2.rc
 vendor/etc/dolby_vision.cfg
+vendor/etc/init/dolbycodec2.rc
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_codecs_system_default_yupik.xml
@@ -1038,14 +1038,14 @@ system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/media/video_system_specs.json
+vendor/etc/media_codecs_performance_yupik_v1.xml
+vendor/etc/media_codecs_yupik_v1.xml
 vendor/etc/media_lahaina/video_system_specs.json
+vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/media_shima_v1/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
-vendor/etc/media_codecs_performance_yupik_v1.xml
-vendor/etc/media_codecs_yupik_v1.xml
-vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/video_system_specs.json
 vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0.stock.so
 vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk.stock.so
@@ -1068,9 +1068,9 @@ vendor/lib64/libmlipay.so
 vendor/lib64/libmlipay@1.1.so
 
 # NFC configs
-vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
+vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 
 # NFC
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
@@ -1208,9 +1208,9 @@ system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/IWlanService/IWlanService.apk
-vendor/bin/hw/qcrilNrd
 vendor/bin/ATFWD-daemon
 vendor/bin/adpl
+vendor/bin/hw/qcrilNrd
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qti
@@ -1229,6 +1229,7 @@ vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
+vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql
@@ -1244,7 +1245,6 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql
 vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql
-vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
