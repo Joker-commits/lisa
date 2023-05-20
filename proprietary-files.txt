@@ -84,6 +84,15 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
 
+# Audio configs
+vendor/etc/audio/sku_yupik/audio_effects.xml
+vendor/etc/audio/sku_yupik/audio_io_policy.conf
+vendor/etc/audio/sku_yupik/mixer_paths_overlay_dynamic.xml
+vendor/etc/audio/sku_yupik/mixer_paths_overlay_static.xml
+vendor/etc/audio/sku_yupik/mixer_paths_yupikqrd.xml
+vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths_yupikqrd.xml
+vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml
+
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
