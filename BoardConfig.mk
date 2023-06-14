@@ -61,7 +61,6 @@ MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
-TARGET_USES_VULKAN := true
 
 # Dolby Vision
 SOONG_CONFIG_NAMESPACES += dolby_vision
