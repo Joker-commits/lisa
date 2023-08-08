@@ -23,10 +23,14 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.view.Display.HdrCapabilities;
 import android.view.SurfaceControl;
+import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.PocketService;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.utils.FileUtils;
+import android.content.SharedPreferences;
+import androidx.preference.PreferenceManager;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -47,6 +51,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Pocket
         PocketService.startService(context);
+	// SharedPreferences
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         // Override HDR types
         final IBinder displayToken = SurfaceControl.getInternalDisplayToken();
