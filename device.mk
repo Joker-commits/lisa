@@ -64,6 +64,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -164,8 +166,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
-    libdisplayconfig.system \
     libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
@@ -311,9 +311,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libstagefrighthw \
     libstagefright_omx \
-    libstagefright_foundation \
-    libOmxVdec \
-    libOmxVenc
+    libstagefright_foundation
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
