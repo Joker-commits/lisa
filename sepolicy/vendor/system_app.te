@@ -1,2 +1,4 @@
 # Xiaomi Parts
 allow system_app sysfs_thermal:file rw_file_perms;
+type sysfs_display, sysfs_type, fs_type;
+allow system_app sysfs_display:file rw_file_perms;
