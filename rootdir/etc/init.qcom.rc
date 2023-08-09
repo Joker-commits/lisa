@@ -113,12 +113,6 @@ on boot
     # Create persist for camera calibration data
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
 
-    # Allow system to modify exposure adjustment state
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
-
     # Enable qcrild and data services
     enable vendor.qcrild
     enable vendor.qcrild2
