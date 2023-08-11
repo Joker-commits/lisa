@@ -54,5 +54,5 @@
     <dimen name="config_rounded_mask_size">156px</dimen>
 
      <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
-    <bool name="config_aodMaxRefreshRate">60</bool>
+    <integer name="config_aodMaxRefreshRate">60</integer>
 </resources>
