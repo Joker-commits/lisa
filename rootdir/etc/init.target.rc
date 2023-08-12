@@ -175,6 +175,9 @@ on post-fs-data
     chmod 0666 /sys/module/migt/parameters/mi_viptask
     restorecon /sys/module/migt/parameters/mi_viptask
     mkdir /data/vendor/misc/display 0771 system system
+    # Dolby
+    mkdir /data/vendor/dolby 0770 media media
+    mkdir /data/vendor/multimedia 0775 system system
 
 on early-boot
     start vendor.sensors

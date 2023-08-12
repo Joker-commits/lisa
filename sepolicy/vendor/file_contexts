@@ -18,6 +18,10 @@
 /vendor/bin/displayfeature                                              u:object_r:vendor_displayfeature_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service    u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
 
+# Dolby
+/data/vendor/dolby(/.*)?                                                               u:object_r:vendor_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service               u:object_r:hal_dms_default_exec:s0
+
 #DC Drimming
 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure	u:object_r:sysfs_display:s0
 
