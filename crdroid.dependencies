@@ -1,0 +1,27 @@
+[
+  {
+    "repository": "crdroidandroid/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "13.0-MI8350"
+  },
+  {
+    "repository": "crdroidandroid/android_vendor_xiaomi_lisa",
+    "target_path": "vendor/xiaomi/lisa",
+  },
+  {
+    "repository": "adrian1234a/vendor_xiaomi_camera-lisa",
+    "target_path": "vendor/xiaomi/camera",
+    "branch": "thirteen",
+    "remote": "github"
+  },
+  {
+    "repository": "crdroidandroid/android_kernel_xiaomi_lisa",
+    "target_path": "kernel/xiaomi/lisa"
+  },
+  {
+    "repository": "PixelOS-Devices/vendor_xiaomi_lisa-firmware",
+    "target_path": "vendor/xiaomi/lisa-firmware",
+    "branch": "thirteen",
+    "remote": "gitlab"
+  }
+]
