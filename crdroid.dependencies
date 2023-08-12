@@ -22,6 +22,6 @@
     "repository": "PixelOS-Devices/vendor_xiaomi_lisa-firmware",
     "target_path": "vendor/xiaomi/lisa-firmware",
     "branch": "thirteen",
-    "remote": "gitlab"
+    "remote": "crdroid-gitlab"
   }
 ]
