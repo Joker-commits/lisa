@@ -9,10 +9,8 @@
     "target_path": "vendor/xiaomi/lisa",
   },
   {
-    "repository": "adrian1234a/vendor_xiaomi_camera-lisa",
-    "target_path": "vendor/xiaomi/camera",
-    "branch": "thirteen",
-    "remote": "github"
+    "repository": "crdroidandroid/vendor_xiaomi_camera-lisa",
+    "target_path": "vendor/xiaomi/camera"
   },
   {
     "repository": "crdroidandroid/android_kernel_xiaomi_lisa",
