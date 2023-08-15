@@ -6,7 +6,7 @@
   },
   {
     "repository": "crdroidandroid/android_vendor_xiaomi_lisa",
-    "target_path": "vendor/xiaomi/lisa",
+    "target_path": "vendor/xiaomi/lisa"
   },
   {
     "repository": "crdroidandroid/vendor_xiaomi_camera-lisa",
@@ -17,9 +17,8 @@
     "target_path": "kernel/xiaomi/lisa"
   },
   {
-    "repository": "PixelOS-Devices/vendor_xiaomi_lisa-firmware",
+    "repository": "crdroidandroid/android-vendor-xiaomi-lisa-firmware",
     "target_path": "vendor/xiaomi/lisa-firmware",
-    "branch": "thirteen",
     "remote": "crdroid-gitlab"
   }
 ]
