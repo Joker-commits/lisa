@@ -9,7 +9,7 @@
     "target_path": "vendor/xiaomi/lisa"
   },
   {
-    "repository": "crdroidandroid/vendor_xiaomi_camera-lisa",
+    "repository": "crdroidandroid/android_vendor_xiaomi_camera-lisa",
     "target_path": "vendor/xiaomi/camera"
   },
   {
