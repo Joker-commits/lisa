@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/lisa/device.mk)
 $(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1920
 
+# Official-ify
+VOLTAGE_BUILD_TYPE := OFFICIAL
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lisa
 PRODUCT_MANUFACTURER := Xiaomi
