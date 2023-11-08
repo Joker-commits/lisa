@@ -2,7 +2,6 @@
   {
     "repository": "crdroidandroid/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi",
-    "branch": "13.0-MI8350"
   },
   {
     "repository": "crdroidandroid/android_vendor_xiaomi_lisa",
@@ -11,7 +10,6 @@
   {
     "repository": "crdroidandroid/android_vendor_xiaomi_camera-lisa",
     "target_path": "vendor/xiaomi/camera",
-    "branch": "13.0"
   },
   {
     "repository": "crdroidandroid/android_kernel_xiaomi_lisa",
