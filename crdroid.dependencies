@@ -14,5 +14,9 @@
   {
     "repository": "crdroidandroid/android_kernel_xiaomi_lisa",
     "target_path": "kernel/xiaomi/lisa"
+  },
+  {
+    "repository": "crdroidandroid/android_vendor_xiaomi_lisa-firmware",
+    "target_path": "vendor/xiaomi/lisa-firmware"
   }
 ]
