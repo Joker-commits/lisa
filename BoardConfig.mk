@@ -9,6 +9,9 @@ DEVICE_PATH := device/xiaomi/lisa
 
 BOARD_VENDOR := xiaomi
 
+# Firmware
+-include vendor/xiaomi/lisa-firmware/BoardConfigVendor.mk
+
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_DUP_RULES := true
 
@@ -119,6 +122,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION) \
 
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lisa
 TARGET_KERNEL_CONFIG := lisa_defconfig
+TARGET_KERNEL_CLANG_VERSION := proton
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton
 
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 \

@@ -23,6 +23,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/lisa/lisa-vendor.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Camera
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -86,6 +89,11 @@ PRODUCT_PACKAGES += \
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+#MemeCam
+#PRODUCT_SYSTEM_PROPERTIES += \
+ #   ro.miui.notch=1 \
+ #   ro.product.mod_device=lisa
 
 # Bluetooth
 PRODUCT_PACKAGES += \
