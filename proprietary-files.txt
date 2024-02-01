@@ -1546,6 +1546,7 @@ system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/libwfdavenhancements.so
 system_ext/lib64/libwfdclient.so
 system_ext/lib64/libwfdcommonutils.so
