@@ -82,3 +82,10 @@ service vendor.qti.hardware.display.allocator /vendor/bin/hw/vendor.qti.hardware
     capabilities SYS_NICE
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
+
+service mfp-daemon /vendor/bin/hw/mfp-daemon
+    override
+    class late_start
+    user system
+    group system drmrpc diag input uhid
+    capabilities SYS_NICE

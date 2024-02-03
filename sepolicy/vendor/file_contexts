@@ -62,6 +62,7 @@
 
 # Fingerprint
 /data/vendor/fpc(/.*)?                                              u:object_r:vendor_fingerprint_data_file:s0
+/vendor/bin/hw/mfp-daemon                                           u:object_r:hal_fingerprint_default_exec:s0
 
 # Sensors Fix script
 /vendor/bin/init\.sensors_fix\.sh	      u:object_r:vendor_init-qcom-sensors-sh_exec:s0
@@ -77,3 +78,4 @@
 
 # Xiaomi CIT sensor service
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                  u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+
