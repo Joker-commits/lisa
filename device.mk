@@ -26,6 +26,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Camera
 $(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
