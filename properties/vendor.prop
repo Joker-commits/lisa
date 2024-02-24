@@ -15,6 +15,7 @@ persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.audio.spv4.enable=true
 persist.vendor.audio.vbat.enabled=false
 persist.vendor.audio.voicecall.speaker.stereo=true
+ro.audio.spatializer_enabled=true
 ro.audio.monitorRotation=true
 ro.vendor.audio.scenario.support=true
 ro.vendor.audio.sdk.fluencetype=fluence
